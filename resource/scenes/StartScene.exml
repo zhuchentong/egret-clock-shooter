@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin width="640" height="1136" class="StartSceneExml" xmlns:e="http://ns.egret.com/eui"
+        xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+    <w:Declarations></w:Declarations>
+    <e:Group percentHeight="100" percentWidth="100" horizontalCenter="0">
+        <e:Label text="时 钟 射 手" y="150" horizontalCenter="0" scaleX="1" scaleY="1" size="60"
+                 fontFamily="Microsoft YaHei" textColor="0xff0000" verticalAlign="middle" textAlign="center" bold="true" />
+        <e:Image y="300" anchorOffsetX="0" width="130" anchorOffsetY="0" height="130" source="player"
+                 horizontalCenter="0" />
+        <e:Image id="stickImg" source="playerStick" anchorOffsetY="82" anchorOffsetX="10.5" y="382" height="80"
+                 width="21" horizontalCenter="0.5" />
+        <e:Button id="startButton" label="开始游戏" y="700" anchorOffsetX="0" width="200" anchorOffsetY="0" height="70" horizontalCenter="0">
+        </e:Button>
+    </e:Group>
+</e:Skin>
