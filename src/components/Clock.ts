@@ -43,7 +43,7 @@ class Clock extends egret.Sprite {
         this.stick.x = this.width / 2
         this.stick.y = this.stick.height
         this.stick.anchorOffsetX = this.stick.width / 2
-        this.stick.anchorOffsetY = this.stick.height
+        this.stick.anchorOffsetY = this.stick.height - 5
         this.toggleClockStyle(false)
         this.addChild(this.stick)
     }

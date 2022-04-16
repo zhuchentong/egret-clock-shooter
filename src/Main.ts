@@ -32,6 +32,9 @@ class Main extends eui.UILayer {
 
     protected createChildren(): void {
         super.createChildren();
+        this.addEventListener(egret.Event.RESIZE, (...a) => {
+            console.log(a)
+        }, this)
 
         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin
@@ -60,12 +63,15 @@ class Main extends eui.UILayer {
     private async runGame() {
         await this.loadResource()
         await this.createGameScene();
+
+        this.y = (this.stage.stageHeight - 1136)/2
         //     const result = await RES.getResAsync("description_json")
         //     this.startAnimation(result);
     }
 
     private async loadResource() {
         try {
+            this.verticalCenter = 0
             const loadingView = new LoadingUI();
             this.stage.addChild(loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");

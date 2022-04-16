@@ -22,7 +22,7 @@ class PlayScene extends Scene {
 	private boxCount = 8
 	private beginX
 	private beginY
-	private boxScore = 0
+	private boxScore = 5
 	private currentScore = 0
 	public constructor() {
 		super();
@@ -35,7 +35,7 @@ class PlayScene extends Scene {
 		this.createMatrixBox()
 		this.createDisplayBoxs()
 		this.createPlayer()
-		this.updateScore()
+		egret.localStorage.setItem("score", this.currentScore.toString())
 		this.addEventListener(egret.TouchEvent.TOUCH_TAP, () => this.onTouch(), this)
 		this.addEventListener(egret.Event.ENTER_FRAME, this.update, this);
 	}
